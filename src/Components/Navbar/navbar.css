@@ -1,0 +1,117 @@
+/* Basic Navbar Styles */
+.navbar {
+  background-color: #111;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.navbar-links a,
+.dropdown-toggle {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.navbar-links :hover{
+   color: #f0c040;}
+
+.dropdown-menu:hover{
+  color: aliceblue;
+}
+.explore-btn {
+  background-color: #f39c12;
+  color: white;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  background: white;
+  height: 3px;
+  margin: 4px 0;
+  width: 25px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background-color: #222;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.dropdown-menu a {
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+
+.dropdown-menu a:hover {
+  background-color: #000000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #111;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    display: none;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    position: relative;
+  }
+}
+  
