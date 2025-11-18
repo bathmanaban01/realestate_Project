@@ -1,28 +1,28 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter , Routes, Route } from "react-router-dom";
 
 import Navbar from "./Components/Navbar/navbar";
-import Home from './Components/sHome/Shome';
-import About from "./Components/About/About";
-import Services from "./Components/services/Service"
-import BlogSection from "./Components/Blogs/Blog";
-import Project from './Components/Project/Project'
-import ContactPage from "./Components/Contact/Contact";
+import Home from './pages/sHome/Shome';
+import About from "./pages/About/About";
+import Services from "./pages/services/Service"
+import Blog from "./pages/Blogs/Blog";
+import Project from './pages/Project/Project'
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/Services" element={<Services />} />
-        <Route path="/Blogs" element={<BlogSection />} />
+        <Route path="/Blogs" element={<Blog />} />
         <Route path="/Projects" element={<Project />} />
-        <Route path="/Contact" element={<ContactPage />} />
-        
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
-    </>
+      
+    </BrowserRouter>
   );
 }
 
